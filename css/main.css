@@ -56,18 +56,76 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* First thing we do is to add some styling to the body. Usually we first do three things
+    1. Define the font using font-family
+    2. Define the font size using font-size
+    3. Give it a background color using background. #ccc means grey.
+*/
 
+body {
+    font-family: aria;
+    font-size: 13px;
+    background: #ccc;
+}
 
+/*
+   The boiler plate does not take the margin away for the ul(unordered lists). We want to get rid of them now. 
+*/
 
+ul {
+    margin: 0px;
+    padding: 0px;
+}
 
+/*
+    we want to make the container to be in the middle and about 80% wide.
+*/
+#container {
+    width:85%;
+    background: #fff;     /* To provide better contrast, we want the container to be white while the rest be grey.#fff is white */
+    margin: 10px auto;    /* This means 10px on the top and bottom, and auto makes it to be right in the middle because it make the left                                margin equal to the right margin */
+    overflow: auto;       /* If the overflow occurs(meaning there is too much content), it will add a scroll bar*/
+    border-radius: 10px;  /* Used to create rounded corners */
+}
 
+/*  we notice that the content is too close to the left edge of the container. What we want to do is add some padding on the left.
+    However, we do not want to add padding to the navigation bar, so we will add padding and style to each different sections
+*/
 
+header#main { /*Selector that selects the id main from the header element*/
+    /*  We want to add padding 10px on the left and make a light grey background*/
+    background: #f4f4f4; /* This is a light grey color */
+    padding: 10px;       /* padding in all 4 directions*/
+}
 
+/* align the main area and the footer */
 
+main {
+    padding:20px;
+}
 
+footer {
+    padding: 10px;
+    text-align: center; /*  Make the text to be in the middle of the footer */
+}
 
+/* Now we will work on the navigation bar */
+nav {
+    height: 40px;
+    background: #aaa; /*  This is another type of light grey */
+    overflow: hidden;
+}
 
+nav ul li {
+    float: left;         /* start aligning from the left */
+    list-style: none;    /*Get rid of the dot in front of the link*/
+    padding: 10px 10px 0 10px; /*We want it to be in the bottom, top, right, bottom and left*/
+}
 
+nav a {   /*To style a link, you cannot just style the li. You have to style the a*/
+    text-decoration: none;  /* We want our link to be white not blue, this we get rid of the colour*/
+    color: white;  
+}
 
 
 /* ==========================================================================
