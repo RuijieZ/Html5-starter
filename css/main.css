@@ -104,6 +104,17 @@ main {
     padding:20px;
 }
 
+/* now we want the aside to float on the right, and we want the article to float on the left */
+#article-section {
+    float:left;
+    width:70%;    /*We need change the width so they can fit it*/
+}
+
+aside {
+    float:right;
+    width: 20%;   /* 20 and 70 percent because we need to account for the padding defined in main. if we choose 30 and 70, there will be                        overlapping because of the 20px padding defined above */
+}
+
 footer {
     padding: 10px;
     text-align: center; /*  Make the text to be in the middle of the footer */
@@ -125,15 +136,34 @@ nav ul li {
 nav a {   /*To style a link, you cannot just style the li. You have to style the a*/
     text-decoration: none;  /* We want our link to be white not blue, this we get rid of the colour*/
     color: white;  
+    font-weight: bold;
 }
+
+/* Now we want to make it black when we hover over it */
+nav a:hover{
+    color:#000;  /*black is #000*/
+}
+
+
+
+
+
 
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
+@media only screen and (max-width: 600px) {
+    /* In a mobile device, we want our article and aside not to float and fill out the entire width*/
+    #article-section {
+        width: 100%;
+        float:none;
+    }
+    aside {
+        width: 100%;
+        float: none;
+    }
 }
 
 @media print,
