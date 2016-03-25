@@ -16,7 +16,7 @@
         <!--We want to make the entire body to be 80% wide of the browser. To do that, we will add a div to wrap up everything -->
         <div id = container>
             <header id="main"> 
-                    <h1>Hi, This is my HTML5 WEBSITE</h1>
+                    <h1>Hi, This is my HTML5 MoodTeller WEBSITE</h1>
             </header>
             <nav>
                 <ul>
@@ -29,11 +29,27 @@
             <main>
                 <section id="article-section">
                     <article>
-                        <h2>My Headline</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
+                        <!-- Enter your mood and your name, it will pop up a box tell your mood -->
+                        <h2>Enter your mood</h2>
+                        <p> Please enter your name and your mood</p>
+                        <form id ="moodForm" action = "#"> <!-- This element can be used to take in input, and define an action attribute --> 
+                                                       <!-- action is used to send it to a script, like a PHP file ,we will use a hash tab becuase it is not gonna be submitted to anywhere, it will just call our javascript function -->
+                            
+                            <lable>Name</lable>
+                            <input type = "text" id = "name" placeholder ="Your name"> <!-- for input, we need specify the type -->
+                            <br><br>
+                            <label>Mood</label>
+                            <input type ="text" id = "mood" placeholder ="Your mood">
+                            <br><br> <!-- Line breaks -->
+                            <button onclick="showMood()">Tell Mood</button>
+                            <button onclick="clearMood()">Clear Mood</button>
+                        </form>
+                        
+                        <!-- Now we want to create a div that when the button clips, the result will be shown in that area. We want to show                              it in the middle blank area so we will position to be absolute -->
+                        <div id="holder"></div> 
+                        
+                        <!--Note that we do not need any content in this holder div as the javascript code will insert the content for us                               when we click -->
+                        
                     </article>
                 </section>
                 <aside>

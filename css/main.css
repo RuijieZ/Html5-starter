@@ -102,6 +102,7 @@ header#main { /*Selector that selects the id main from the header element*/
 
 main {
     padding:20px;
+    position: relative; /* To make us be able to define the location of the holder div */
 }
 
 /* now we want the aside to float on the right, and we want the article to float on the left */
@@ -145,8 +146,14 @@ nav a:hover{
 }
 
 
-
-
+/* The holder div, where the new string is inserted into */
+#holder {
+    position: absolute;
+    top:70px;
+    left:450px;
+    font-size: 20px;
+    width: 260px;
+}
 
 
 
